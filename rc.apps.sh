@@ -39,7 +39,7 @@ echo "##########################################################################
 mkdir -v apps_d
 mv *.rc-app.zip ./apps_d
 # List the downloaded apps via zip files.
-ls -lh ./app_d/*.rc-app.zip
+ls -lh ./apps_d/*.rc-app.zip
 echo "#################################################################################"
 echo "Enable developer mode in Rocket.Chat setting."
 echo "Upload the app_name .zip file you want to use."
