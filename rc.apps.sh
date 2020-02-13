@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Delete all old apps and rc.apps.json
+rm -rfv apps_d
 rm -rfv *.rc-app.zip
 rm -rfv rc.apps.json
 rm -rfv apps_list
@@ -34,8 +35,11 @@ do
   echo "#################################################################################"
 done < $APP_LIST
 echo "#################################################################################"
+# Move all apps to separate directory
+mkdir -v apps_d
+mv *.rc-app.zip ./apps_d
 # List the downloaded apps via zip files.
-ls -lh *.zip
+ls -lh ./app_d/*.rc-app.zip
 echo "#################################################################################"
 echo "Enable developer mode in Rocket.Chat setting."
 echo "Upload the app_name .zip file you want to use."
